@@ -1,14 +1,15 @@
 // pages/_app.tsx
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import Navbar from '../components/Navbar'   // <-- Add this line
+import '../styles/globals.css'; // <-- Only if you use Tailwind or global CSS!
+import Navbar from "../components/Navbar";
 
-export default function App({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Navbar />  {/* Show navbar on every page */}
+      <Navbar />
       <Component {...pageProps} />
     </>
-  )
+  );
 }
+
+export default MyApp;
 

@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo & Brand */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Logo" width={40} height={40} className="rounded-full" />
+          <Image src="/profile.jpg" alt="Profile" width={40} height={40} className="rounded-full" />
           <span className="font-bold text-xl text-blue-600">AT</span>
         </Link>
         {/* Menu */}

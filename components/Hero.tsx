@@ -1,4 +1,3 @@
-// components/Hero.tsx
 import React from "react";
 
 export default function Hero() {
@@ -21,7 +20,6 @@ export default function Hero() {
         </a>
       </div>
       <div className="mt-10 md:mt-0 flex-shrink-0 flex flex-col items-center">
-        {/* Profile picture or animation */}
         <img
           src="/profile.png"
           alt="Alan Thomas"

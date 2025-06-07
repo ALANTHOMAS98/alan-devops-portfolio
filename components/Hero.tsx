@@ -1,39 +1,34 @@
-// components/Hero.tsx
-import Image from "next/image";
-
-export default function Hero() {
-  return (
-    <section id="home" className="flex flex-col-reverse md:flex-row items-center justify-between py-16 max-w-7xl mx-auto px-6">
-      <div className="flex-1 text-center md:text-left">
-        <h1 className="text-4xl md:text-5xl font-bold mb-2">
-          Alan Thomas
-        </h1>
-        <h2 className="text-2xl text-primary font-bold mb-4">
-          DevOps & Cloud Engineer
-        </h2>
-        <p className="mb-6 text-lg text-gray-600">
-          Building scalable, resilient infrastructure and automating everything.
-        </p>
-        <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-          <a href="#contact" className="px-6 py-2 rounded bg-primary text-white font-semibold hover:bg-blue-700 transition">
-            Contact Me
-          </a>
-          <a href="#projects" className="px-6 py-2 rounded border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition">
-            View My Work
-          </a>
-        </div>
-      </div>
-      <div className="flex-1 flex items-center justify-center mb-8 md:mb-0">
-        <Image
-          src="/profile.jpg"
-          alt="Alan Thomas"
-          width={220}
-          height={220}
-          className="rounded-full shadow-lg object-cover"
-          priority
-        />
-      </div>
-    </section>
-  );
-}
+// Inside pages/index.tsx or your Hero.tsx
+<section className="min-h-screen flex flex-col md:flex-row items-center justify-between bg-bgLight pt-32 px-6">
+  <div className="max-w-xl space-y-6">
+    <h1 className="text-5xl font-bold text-gray-900 mb-2">Alan Thomas</h1>
+    <h2 className="text-2xl font-semibold text-blue-600 mb-4">
+      DevOps & Cloud Engineer
+    </h2>
+    <p className="text-lg text-gray-600 mb-6">
+      Building scalable, resilient infrastructure and automating everything.
+    </p>
+    <div className="flex space-x-4">
+      <a
+        href="#contact"
+        className="px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition"
+      >
+        Contact Me
+      </a>
+      <a
+        href="#projects"
+        className="px-6 py-3 border border-blue-600 text-blue-600 rounded-xl font-semibold hover:bg-blue-50 transition"
+      >
+        View My Work
+      </a>
+    </div>
+  </div>
+  <div className="mt-10 md:mt-0 md:ml-10">
+    <img
+      src="/profile.jpg"
+      alt="Alan Thomas"
+      className="rounded-full shadow-lg w-60 h-60 object-cover border-4 border-blue-200"
+    />
+  </div>
+</section>
 

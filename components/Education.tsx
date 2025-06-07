@@ -49,12 +49,14 @@ export default function Education() {
               className="w-full px-4 py-3 flex justify-between items-center text-left focus:outline-none"
             >
               <div className="flex items-center">
-                <div className="w-10 h-10 mr-4 relative">
+                <div className="flex items-center justify-center w-12 h-12 mr-4 bg-white rounded-full overflow-hidden">
                   <Image
                     src={ed.logo}
                     alt={ed.school}
-                    fill
+                    width={48}
+                    height={48}
                     className="object-contain"
+                    priority
                   />
                 </div>
                 <div>
@@ -94,3 +96,4 @@ export default function Education() {
     </section>
   );
 }
+

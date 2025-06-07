@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { FaAward } from "react-icons/fa";
-
+import FaAward from "react-icons/fa/FaAward";
 export default function Awards() {
   const [open, setOpen] = useState(false);
 

@@ -3,20 +3,15 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="w-full bg-white shadow-md">
-      <div className="container mx-auto px-6 py-3 flex items-center justify-between">
-        {/* Logo and Brand */}
-        <div className="flex items-center">
-          <Link href="/">
-            <span className="font-extrabold text-2xl text-blue-600 flex items-center gap-2 cursor-pointer">
-              {/* Your logo: adjust src if needed */}
-              <Image src="/logo.png" alt="Logo" width={40} height={40} className="mr-2" />
-              AT
-            </span>
-          </Link>
-        </div>
-        {/* Menu Links */}
-        <div className="flex gap-8 text-lg font-medium">
+    <nav className="w-full bg-white shadow">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo & Brand */}
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/logo.png" alt="Logo" width={40} height={40} className="rounded-full" />
+          <span className="font-bold text-xl text-blue-600">AT</span>
+        </Link>
+        {/* Menu */}
+        <div className="flex gap-8 text-base font-semibold text-gray-800">
           <Link href="/">Home</Link>
           <Link href="#about">About</Link>
           <Link href="#skills">Skills</Link>

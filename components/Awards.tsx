@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { FaAward } from "react-icons/fa";
+
 export default function Awards() {
   const [open, setOpen] = useState(false);
+  // Type-cast FaAward as ElementType for safety
+  const Icon = FaAward as React.ElementType;
 
   return (
     <section className="my-10">
       <h2 className="text-2xl font-bold mb-4 text-blue-300 flex items-center gap-2">
-        <FaAward className="text-yellow-400" /> Honours & Awards
+        <Icon className="text-yellow-400" /> Honours & Awards
       </h2>
       <div className="border border-blue-800 rounded-xl bg-[#181c20]">
         <button
@@ -37,3 +40,4 @@ export default function Awards() {
     </section>
   );
 }
+

@@ -1,30 +1,35 @@
-import React from "react";
-
+// components/Hero.tsx
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col md:flex-row items-center justify-between bg-bgLight pt-32 px-6">
-      <div className="max-w-xl space-y-6">
-        <h1 className="text-5xl font-bold text-gray-900 mb-2">Alan Thomas</h1>
-        <h2 className="text-2xl font-semibold text-blue-600 mb-4">
-          Building Scalable Cloud Systems | Terraform | Kubernetes | AWS
-        </h2>
-        <p className="text-lg text-gray-700">
-          Curious and driven DevOps enthusiast passionate about cloud, CI/CD, Terraform, Kubernetes, and AWS. Currently pursuing a Master's in Telecommunication Engineering & Network Management at RTU, Latvia.
-        </p>
+    <section
+      id="home"
+      className="min-h-[60vh] flex flex-col justify-center items-center bg-bgLight pt-12"
+    >
+      <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2 text-center">
+        Alan Thomas
+      </h1>
+      <h2 className="text-xl sm:text-2xl font-semibold text-blue-600 mb-4 text-center">
+        Building Scalable Cloud Systems | Terraform | Kubernetes | AWS
+      </h2>
+      <p className="max-w-2xl text-gray-700 text-center mb-6 px-4">
+        Curious and driven DevOps enthusiast passionate about cloud, CI/CD, Terraform, Kubernetes, and AWS.
+        Currently pursuing a Master&apos;s in Telecommunication Engineering &amp; Network Management at RTU, Latvia.
+      </p>
+      <div className="flex gap-4">
+        <a
+          href="#contact"
+          className="px-6 py-2 rounded-full bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition"
+        >
+          Contact Me
+        </a>
         <a
           href="/resume.pdf"
-          download
-          className="inline-block mt-4 px-5 py-2 rounded-xl bg-primary text-white font-bold shadow-soft hover:bg-blue-700 transition"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-6 py-2 rounded-full border border-blue-600 text-blue-600 font-semibold hover:bg-blue-50 transition"
         >
           Download Resume
         </a>
-      </div>
-      <div className="mt-10 md:mt-0 flex-shrink-0 flex flex-col items-center">
-        <img
-          src="/profile.png"
-          alt="Alan Thomas"
-          className="rounded-full border-4 border-primary shadow-soft w-44 h-44 object-cover"
-        />
       </div>
     </section>
   );

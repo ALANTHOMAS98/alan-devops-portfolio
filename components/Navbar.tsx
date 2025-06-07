@@ -1,7 +1,7 @@
 // components/Navbar.tsx
-import React from "react";
+import Link from "next/link";
 
-const navLinks = [
+const navItems = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Experience", href: "#experience" },
@@ -15,29 +15,28 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur shadow-sm">
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
-        <a href="#home" className="text-2xl font-bold text-blue-700 tracking-wide">
-          Alan<span className="text-blue-400">Thomas</span>
+    <header className="w-full bg-white shadow-sm sticky top-0 z-50">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+        {/* Logo or Brand */}
+        <a href="#home" className="text-2xl font-extrabold text-blue-700 tracking-tight">
+          AlanThomas
         </a>
-        <ul className="hidden md:flex gap-x-8 items-center">
-          {navLinks.map((link) => (
-            <li key={link.label}>
-              <a
-                href={link.href}
-                className="font-medium text-gray-800 hover:text-blue-500 transition-colors"
-              >
-                {link.label}
-              </a>
-            </li>
+        {/* Desktop nav */}
+        <div className="hidden md:flex gap-8">
+          {navItems.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              className="font-medium text-gray-800 hover:text-blue-600 transition"
+            >
+              {item.label}
+            </a>
           ))}
-        </ul>
-        {/* Mobile hamburger */}
-        <div className="md:hidden">
-          {/* If you want a hamburger mobile menu, add here */}
         </div>
-      </div>
-    </nav>
+        {/* Mobile nav toggle (simple hamburger) */}
+        {/* You can add a mobile menu for more advanced usage */}
+      </nav>
+    </header>
   );
 }
 

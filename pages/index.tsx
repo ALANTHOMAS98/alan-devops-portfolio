@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import AboutAndSkills from "../components/AboutAndSkills";
 import Projects from "../components/Projects";
@@ -12,7 +11,6 @@ import Contact from "../components/Contact";
 export default function Home() {
   return (
     <main className="relative bg-bgLight min-h-screen text-textDark">
-      <Navbar />
       <Hero />
       <AboutAndSkills />
       <Experience />
